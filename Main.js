@@ -32,9 +32,13 @@ ticket.writeTicket(process.argv[3]);
 /**
  * send the file to the printer
  */
-logger.info("Executing command : sudo cat "+ process.argv[3] + " | netcat -w 1 192.168.3.86 9100");
+ var command = "sudo cat "+ process.argv[3] + " | netcat -w 1 " + process.argv[5] + " " + process.argv[6] ;
+logger.info("Executing command : " + command);
 var cmd=require('node-cmd');
 cmd.get(
-	'sudo cat '+ process.argv[3] + ' | netcat -w 1 192.168.3.86 9100', 
-		function(err, data, stderr){}
+	command, 
+		function(err, data, stderr){
+			 if(stderr!=='') logger.error("error while executing command : " + command + " : " + stderr	);
+			 else  if(err!==null) logger.error("error while executing command : " + command + " : " + err	);
+		}
 );
