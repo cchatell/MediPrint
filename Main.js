@@ -13,12 +13,12 @@ ticket.readTicket();
 /**
  * change ticket's name
  */
-ticket.name=ticket.replaceAccents(process.argv[3]);
+ticket.name=ticket.replaceAccents(process.argv[4]);
 
 /**
  * export ticket
  */
-ticket.writeTicket();
+ticket.writeTicket(process.argv[3]);
 
 
 /**

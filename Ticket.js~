@@ -116,7 +116,7 @@ module.exports = Ticket = class {
     /**
      * Wxport the current ticket to a prn file
      */
-    writeTicket(){
+    writeTicket(path){
     var cursor = 0;
         cursor = cursor +1;
         this.lines[cursor]=this.lines[cursor].replace(/(\d+)/g, this.width);
@@ -166,7 +166,7 @@ module.exports = Ticket = class {
         this.lines[10]=this.lines[10].replace( /(FD)(.+)(\^)/g, "$1"+this.bye+"$3");
 
         this.file.setLines(this.lines);
-        this.file.writeLines();
+        this.file.writeLines(path);
     }
 
     /**

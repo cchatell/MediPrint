@@ -18,7 +18,7 @@ ticket.name=ticket.replaceAccents(process.argv[3]);
 /**
  * export ticket
  */
-ticket.writeTicket();
+ticket.writeTicket(process.argv[4]);
 
 
 /**
@@ -27,7 +27,5 @@ ticket.writeTicket();
 var cmd=require('node-cmd');
 cmd.get(
 	'sudo cat ./newTicket.prn | netcat -w 1 192.168.3.86 9100', 
-		function(err, data, stderr){
-			console.log(data,err,stderr);
-		}
+		function(err, data, stderr){}
 );

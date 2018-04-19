@@ -20,17 +20,19 @@ module.exports = MyFile = class {
     var text = fs.readFileSync(this.path, "utf-8");
     this.lines=text.split("\n")
   }
-  /**
-   * Writes lines to a new file.
+ /**
+   * Writes lines into a new file
+   *
+   * @param      {<type>}  path    The path of the new file
    */
-  writeLines()
+  writeLines(path)
   {
     var text = ""
     for(var line of this.lines){
-      text = text + line +'\r\n'
+      text = text + line +'\n'
     }
     var fs = require('fs');
-    fs.writeFile("newTicket.prn", text, function(err) {
+    fs.writeFile(path, text, function(err) {
       if(err) {
           return console.log(err);
       }
