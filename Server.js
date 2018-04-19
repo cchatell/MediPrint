@@ -25,7 +25,7 @@ net.createServer(function (socket) {
   		var promise= require('bluebird');
 		const getAsync = promise.promisify(cmd.get, { multiArgs: true, context: cmd })
 		var toPrint = data
-		getAsync('node ./LPR/Ticket.js "./LPR/medipep3.prn" "'+data+'"').then(data => {
+		getAsync('node ./Main.js "./medipep3.prn" "'+data+'"').then(data => {
 			cmd.get(
 	        		'cat ./newTicket.prn | netcat -w 1 192.168.3.86 9100',
 	        		function(err, data, stderr){
