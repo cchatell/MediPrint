@@ -13,7 +13,7 @@ ticket.readTicket();
 /**
  * change ticket's name
  */
-ticket.name=ticket.replaceAccents(process.argv[3]);*
+ticket.name=ticket.replaceAccents(process.argv[3]);
 
 /**
  * export ticket
@@ -28,6 +28,6 @@ var cmd=require('node-cmd');
 cmd.get(
 	'cat ./newTicket.prn | netcat -w 1 192.168.3.86 9100', 
 		function(err, data, stderr){
-			broadcast(socket.name + " is printing \'" + toPrint+"\'. \n", socket);
+			console.log(data);
 		}
 );
