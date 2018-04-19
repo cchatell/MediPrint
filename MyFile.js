@@ -8,7 +8,8 @@ module.exports = MyFile = class {
    *
    * @param      {<type>}  path    The path of the file
    */
-  constructor(path) {
+  constructor(path,logger) {
+  	this.logger = logger;
     this.path = path;
     this.lines = new Array();	
   }
@@ -17,6 +18,7 @@ module.exports = MyFile = class {
    */
   readLines() {
     var fs = require("fs");
+    this.logger.info("Reading file "+this.path+" synchronously with format utf-8");
     var text = fs.readFileSync(this.path, "utf-8");
     this.lines=text.split("\n")
   }
@@ -31,10 +33,11 @@ module.exports = MyFile = class {
     for(var line of this.lines){
       text = text + line +'\n'
     }
+    this.logger.info("Writing file : "+path);
     var fs = require('fs');
     fs.writeFile(path, text, function(err) {
       if(err) {
-          return console.log(err);
+          this.logger.error("Error writing file " + path + " : " + err);
       }
     }); 
   }

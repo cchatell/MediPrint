@@ -1,0 +1,18 @@
+{"level":"info","message":"test","timestamp":"12:40:55"}
+{"level":"info","message":"Reading file medipep3.prn synchronously with format utf-8","timestamp":"12:53:04"}
+{"level":"info","message":"Writing file ./newTicket.prn","timestamp":"12:53:04"}
+{"level":"error","message":"test","timestamp":"12:53:04"}
+{"level":"info","message":"Creating new ticket with path : medipep3.prn","timestamp":"13:02:52"}
+{"level":"info","message":"Reading file medipep3.prn synchronously with format utf-8","timestamp":"13:02:52"}
+{"level":"info","message":"Importing template from file : medipep3.prn","timestamp":"13:02:52"}
+{"level":"info","message":"Changing ticket's name to : test42","timestamp":"13:02:52"}
+{"level":"info","message":"Writing new ticket to : ./newTicket.prn","timestamp":"13:02:52"}
+{"level":"info","message":"Writing file : ./newTicket.prn","timestamp":"13:02:52"}
+{"level":"info","message":"Executing command : sudo cat ./newTicket.prn | netcat -w 1 192.168.3.86 9100","timestamp":"13:02:52"}
+{"level":"info","message":"Creating new ticket with template path : medipep3.prn","timestamp":"13:03:32"}
+{"level":"info","message":"Reading file medipep3.prn synchronously with format utf-8","timestamp":"13:03:32"}
+{"level":"info","message":"Importing template from file : medipep3.prn","timestamp":"13:03:32"}
+{"level":"info","message":"Changing ticket's name to : test42","timestamp":"13:03:32"}
+{"level":"info","message":"Writing new ticket to : ./newTicket.prn","timestamp":"13:03:32"}
+{"level":"info","message":"Writing file : ./newTicket.prn","timestamp":"13:03:32"}
+{"level":"info","message":"Executing command : sudo cat ./newTicket.prn | netcat -w 1 192.168.3.86 9100","timestamp":"13:03:32"}

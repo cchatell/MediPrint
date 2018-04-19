@@ -10,7 +10,8 @@ module.exports = Ticket = class {
      *
      * @param      {<type>}  path    The path of the template to use
      */
-    constructor(path) {
+    constructor(path, logger) {
+    	this.logger=logger;
         /**
         * message used first to thank the patient for visiting
         */
@@ -48,7 +49,7 @@ module.exports = Ticket = class {
         /**
         * file of the template used to generate the ticket
         */
-        this.file = new MyFile(path);
+        this.file = new MyFile(path, logger);
         this.file.readLines();
         /**
         * lines of the file representing the ticket
@@ -76,7 +77,6 @@ module.exports = Ticket = class {
      * import ticket properties from the template
      */
     readTicket(){
-
         var line = this.lines[1];
         var myRegexp = /(\d+)/g;
         var match = myRegexp.exec(line);
@@ -117,7 +117,7 @@ module.exports = Ticket = class {
      * Wxport the current ticket to a prn file
      */
     writeTicket(path){
-    var cursor = 0;
+    		var cursor = 0;
         cursor = cursor +1;
         this.lines[cursor]=this.lines[cursor].replace(/(\d+)/g, this.width);
 
