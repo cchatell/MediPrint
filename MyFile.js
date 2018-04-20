@@ -1,20 +1,41 @@
 /**
- * class representing a file
+ * Class for reading and writing file.
+ *
+ * @class      MyFile
  */
-module.exports = MyFile = class {
+export class MyFile {
 
   /**
    * Constructs the object.
    *
-   * @param      {<String>}  path    The path of the file
+   * @method     constructor
+   * @param      {string}  path    The path
+   * @param      {Logger}  logger  The logger
    */
   constructor(path,logger) {
+    /**
+    * logger logging the activity
+    * @property logger 
+    * @Type {Logger} 
+    */
   	this.logger = logger;
+    /**
+    * path of the file
+    * @property path 
+    * @Type {String} 
+    */
     this.path = path;
+    /**
+    * Strings of lines in the file
+    * @property lines 
+    * @Type {Array} 
+    */
     this.lines = new Array();	
   }
   /**
-   * Reads lines from file.
+   * Reads lines.
+   *
+   * @method     readLines
    */
   readLines() {
     var fs = require("fs");
@@ -22,11 +43,13 @@ module.exports = MyFile = class {
     var text = fs.readFileSync(this.path, "utf-8");
     this.lines=text.split("\n")
   }
- /**
-   * Writes lines into a new file
-   *
-   * @param      {<String>}  path    The path of the new file
-   */
+
+   /**
+    * Writes lines into a new file
+    *
+    * @method     writeLines
+    * @param      {string}  path    The path of the new file
+    */
   writeLines(path)
   {
     var text = ""
@@ -41,18 +64,21 @@ module.exports = MyFile = class {
       }
     }); 
   }
-  /**
-   * Gets the lines.
-   *
-   * @return     {<Array<String>>}  The lines.
-   */
+
+ /**
+  * Gets the lines.
+  *
+  * @method     getLines
+  * @return     {Array}  strings representing lines.
+  */
   getLines(){
     return this.lines
   }
   /**
    * Sets the lines.
    *
-   * @param      {<Array<String>>}  lines   The lines
+   * @method     setLines
+   * @param      {Array}  lines   strings representing lines.
    */
   setLines(lines){
     this.lines = lines;

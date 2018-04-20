@@ -1,66 +1,97 @@
 require('./MyFile.js');
 
 /**
-* Class representing a ticket
-*/
-module.exports = Ticket = class {
+ * Class representing a ticket.
+ *
+ * @class      Ticket
+ */
+export class Ticket {
+
 
     /**
      * Constructs the object.
      *
-     * @param      {<type>}  path    The path of the template to use
+     * @method     constructor
+     * @param      {string}  path    The path of the template
+     * @param      {Logger}  logger  The logger
      */
     constructor(path, logger) {
-    	this.logger=logger;
+
         /**
-        * message used first to thank the patient for visiting
-        */
+         * logger logging the activity
+         * @property logger 
+         * @Type {Logger} 
+         */
+    	this.logger=logger;
+         /**
+         * message used first to thank the patient for visiting
+         * @property thankForVisit 
+         * @Type {String} 
+         */
         this.thankForVisit = null;
         /**
         * name of the patient
-        */
+         * @property name 
+         * @Type {String} 
+         */
         this.name = null;
         /**
         * date of the visit
-        */
+         * @property date 
+         * @Type {String} 
+         */
         this.date = null;
         /**
         * message to say goodbye
-        */
+         * @property bye 
+         * @Type {String} 
+         */
         this.bye = null;
         /**
         * height of the ticket
-        */
+         * @property height 
+         * @Type {int} 
+         */
         this.height = 0;
         /**
         * width of the ticket
-        */
+         * @property width 
+         * @Type {int} 
+         */
         this.width = 0;
         /**
         * image of pepper
-        *
-        */
+         * @property pepperImg 
+         * @Type {String} 
+         */
         this.pepperImg;
         /**
         * image of the logo of the retirment house
-        *
-        */
+         * @property logo 
+         * @Type {String} 
+         */
         this.logo;
         /**
         * file of the template used to generate the ticket
-        */
+         * @property file 
+         * @Type {File} 
+         */
         this.file = new MyFile(path, logger);
         this.file.readLines();
         /**
-        * lines of the file representing the ticket
-        */
+        * String lines of the file representing the ticket
+         * @property lines 
+         * @Type {Array} 
+         */
         this.lines=this.file.getLines();
 
     }
 
-    /**
-     * Returns a string representation of the object.
-     */
+     /**
+      * Returns a string representation of the object.
+      *
+      * @method     toString
+      */
     toString(){
         console.log(this.width+'\n'+
         this.height+'\n'+
@@ -74,7 +105,9 @@ module.exports = Ticket = class {
     }
 
     /**
-     * import ticket properties from the template
+     * Import parameters from template
+     *
+     * @method     readTicket
      */
     readTicket(){
         var line = this.lines[1];
@@ -114,7 +147,10 @@ module.exports = Ticket = class {
     }
 
     /**
-     * Export the current ticket to a prn file
+     * Writes the current ticket to a ZPL file
+     *
+     * @method     writeTicket
+     * @param      {string}  path    The path of the file to write
      */
     writeTicket(path){
     		var cursor = 0;
@@ -172,8 +208,9 @@ module.exports = Ticket = class {
     /**
      * replace accents by zpl equivalents
      *
+     * @method     replaceAccents
      * @param      {<String>}            strInput  The string input
-     * @return     {<String>}  { the string with accent replaced }
+     * @return     {<String>}  the string with accent replaced
      */
     replaceAccents(strInput) {
         var strInput = strInput.split('');
