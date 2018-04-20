@@ -6,7 +6,7 @@ module.exports = MyFile = class {
   /**
    * Constructs the object.
    *
-   * @param      {<type>}  path    The path of the file
+   * @param      {<String>}  path    The path of the file
    */
   constructor(path,logger) {
   	this.logger = logger;
@@ -25,7 +25,7 @@ module.exports = MyFile = class {
  /**
    * Writes lines into a new file
    *
-   * @param      {<type>}  path    The path of the new file
+   * @param      {<String>}  path    The path of the new file
    */
   writeLines(path)
   {
@@ -44,7 +44,7 @@ module.exports = MyFile = class {
   /**
    * Gets the lines.
    *
-   * @return     {Array|String}  The lines.
+   * @return     {<Array<String>>}  The lines.
    */
   getLines(){
     return this.lines
@@ -52,7 +52,7 @@ module.exports = MyFile = class {
   /**
    * Sets the lines.
    *
-   * @param      {Array|String}  lines   The lines
+   * @param      {<Array<String>>}  lines   The lines
    */
   setLines(lines){
     this.lines = lines;

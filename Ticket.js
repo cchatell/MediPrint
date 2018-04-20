@@ -114,7 +114,7 @@ module.exports = Ticket = class {
     }
 
     /**
-     * Wxport the current ticket to a prn file
+     * Export the current ticket to a prn file
      */
     writeTicket(path){
     		var cursor = 0;
@@ -173,7 +173,7 @@ module.exports = Ticket = class {
      * replace accents by zpl equivalents
      *
      * @param      {<String>}            strInput  The string input
-     * @return     {(String)}  { the string with accent replaced }
+     * @return     {<String>}  { the string with accent replaced }
      */
     replaceAccents(strInput) {
         var strInput = strInput.split('');
