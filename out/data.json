@@ -1,0 +1,507 @@
+{
+    "project": {},
+    "files": {
+        "Logger.js": {
+            "name": "Logger.js",
+            "modules": {},
+            "classes": {
+                "Logger": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Main.js": {
+            "name": "Main.js",
+            "modules": {},
+            "classes": {
+                "Main": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "MyFile.js": {
+            "name": "MyFile.js",
+            "modules": {},
+            "classes": {
+                "MyFile": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Ticket.js": {
+            "name": "Ticket.js",
+            "modules": {},
+            "classes": {
+                "Ticket": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Logger": {
+            "name": "Logger",
+            "shortname": "Logger",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Logger.js",
+            "line": 1,
+            "description": "class representing the Logger, using winston node module"
+        },
+        "Main": {
+            "name": "Main",
+            "shortname": "Main",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Main.js",
+            "line": 4,
+            "description": "Class for creating and printing a ticket, see README file"
+        },
+        "MyFile": {
+            "name": "MyFile",
+            "shortname": "MyFile",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "MyFile.js",
+            "line": 1,
+            "description": "Class for reading and writing file."
+        },
+        "Ticket": {
+            "name": "Ticket",
+            "shortname": "Ticket",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Ticket.js",
+            "line": 3,
+            "description": "Class representing a ticket."
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "Logger.js",
+            "line": 8,
+            "description": "Constructs the object.",
+            "itemtype": "method",
+            "name": "constructor",
+            "class": "Logger"
+        },
+        {
+            "file": "Logger.js",
+            "line": 14,
+            "description": "winston module",
+            "itemtype": "property",
+            "name": "winston",
+            "type": "{Winston}",
+            "class": "Logger"
+        },
+        {
+            "file": "Logger.js",
+            "line": 20,
+            "description": "file system module",
+            "itemtype": "property",
+            "name": "fs",
+            "type": "{fs}",
+            "class": "Logger"
+        },
+        {
+            "file": "Logger.js",
+            "line": 26,
+            "description": "environment variable",
+            "itemtype": "property",
+            "name": "env",
+            "type": "{String}",
+            "class": "Logger"
+        },
+        {
+            "file": "Logger.js",
+            "line": 32,
+            "description": "path of the directory to write the logs",
+            "itemtype": "property",
+            "name": "logDir",
+            "type": "{String}",
+            "class": "Logger"
+        },
+        {
+            "file": "Logger.js",
+            "line": 44,
+            "description": "date format for the logs",
+            "itemtype": "property",
+            "name": "tsFormat",
+            "type": "{String}",
+            "class": "Logger"
+        },
+        {
+            "file": "Logger.js",
+            "line": 52,
+            "description": "logger logging the activity",
+            "itemtype": "property",
+            "name": "logger",
+            "type": "{Logger}",
+            "class": "Logger"
+        },
+        {
+            "file": "Logger.js",
+            "line": 74,
+            "description": "Gets the logger.",
+            "itemtype": "method",
+            "name": "getLogger",
+            "return": {
+                "description": "The logger.",
+                "type": "Logger"
+            },
+            "class": "Logger"
+        },
+        {
+            "file": "Main.js",
+            "line": 11,
+            "description": "Constructs the object.",
+            "itemtype": "method",
+            "name": "constructor",
+            "class": "Main"
+        },
+        {
+            "file": "Main.js",
+            "line": 17,
+            "description": "create new Ticket with the first argument as path to the file template",
+            "type": "{Ticket}",
+            "class": "Main"
+        },
+        {
+            "file": "Main.js",
+            "line": 26,
+            "description": "import parameters from template",
+            "class": "Main"
+        },
+        {
+            "file": "Main.js",
+            "line": 32,
+            "description": "change ticket's name",
+            "class": "Main"
+        },
+        {
+            "file": "Main.js",
+            "line": 38,
+            "description": "export ticket",
+            "class": "Main"
+        },
+        {
+            "file": "Main.js",
+            "line": 45,
+            "description": "send the file to the printer",
+            "class": "Main"
+        },
+        {
+            "file": "MyFile.js",
+            "line": 8,
+            "description": "Constructs the object.",
+            "itemtype": "method",
+            "name": "constructor",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "The path",
+                    "type": "String"
+                },
+                {
+                    "name": "logger",
+                    "description": "The logger",
+                    "type": "Logger"
+                }
+            ],
+            "class": "MyFile"
+        },
+        {
+            "file": "MyFile.js",
+            "line": 16,
+            "description": "logger logging the activity",
+            "itemtype": "property",
+            "name": "logger",
+            "type": "{Logger}",
+            "class": "MyFile"
+        },
+        {
+            "file": "MyFile.js",
+            "line": 22,
+            "description": "path of the file",
+            "itemtype": "property",
+            "name": "path",
+            "type": "{String}",
+            "class": "MyFile"
+        },
+        {
+            "file": "MyFile.js",
+            "line": 28,
+            "description": "Strings of lines in the file",
+            "itemtype": "property",
+            "name": "lines",
+            "type": "{Array}",
+            "class": "MyFile"
+        },
+        {
+            "file": "MyFile.js",
+            "line": 35,
+            "description": "Reads lines.",
+            "itemtype": "method",
+            "name": "readLines",
+            "class": "MyFile"
+        },
+        {
+            "file": "MyFile.js",
+            "line": 47,
+            "description": "Writes lines into a new file",
+            "itemtype": "method",
+            "name": "writeLines",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "The path of the new file",
+                    "type": "String"
+                }
+            ],
+            "class": "MyFile"
+        },
+        {
+            "file": "MyFile.js",
+            "line": 68,
+            "description": "Gets the lines.",
+            "itemtype": "method",
+            "name": "getLines",
+            "return": {
+                "description": "strings representing lines.",
+                "type": "Array"
+            },
+            "class": "MyFile"
+        },
+        {
+            "file": "MyFile.js",
+            "line": 77,
+            "description": "Sets the lines.",
+            "itemtype": "method",
+            "name": "setLines",
+            "params": [
+                {
+                    "name": "lines",
+                    "description": "strings representing lines.",
+                    "type": "Array"
+                }
+            ],
+            "class": "MyFile"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 11,
+            "description": "Constructs the object.",
+            "itemtype": "method",
+            "name": "constructor",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "The path of the template",
+                    "type": "String"
+                },
+                {
+                    "name": "logger",
+                    "description": "The logger",
+                    "type": "Logger"
+                }
+            ],
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 20,
+            "description": "logger logging the activity",
+            "itemtype": "property",
+            "name": "logger",
+            "type": "{Logger}",
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 26,
+            "description": "message used first to thank the patient for visiting",
+            "itemtype": "property",
+            "name": "thankForVisit",
+            "type": "{String}",
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 32,
+            "description": "name of the patient",
+            "itemtype": "property",
+            "name": "name",
+            "type": "{String}",
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 38,
+            "description": "date of the visit",
+            "itemtype": "property",
+            "name": "date",
+            "type": "{String}",
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 44,
+            "description": "message to say goodbye",
+            "itemtype": "property",
+            "name": "bye",
+            "type": "{String}",
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 50,
+            "description": "height of the ticket",
+            "itemtype": "property",
+            "name": "height",
+            "type": "{int}",
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 56,
+            "description": "width of the ticket",
+            "itemtype": "property",
+            "name": "width",
+            "type": "{int}",
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 62,
+            "description": "image of pepper",
+            "itemtype": "property",
+            "name": "pepperImg",
+            "type": "{String}",
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 68,
+            "description": "image of the logo of the retirment house",
+            "itemtype": "property",
+            "name": "logo",
+            "type": "{String}",
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 74,
+            "description": "file of the template used to generate the ticket",
+            "itemtype": "property",
+            "name": "file",
+            "type": "{File}",
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 81,
+            "description": "String lines of the file representing the ticket",
+            "itemtype": "property",
+            "name": "lines",
+            "type": "{Array}",
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 90,
+            "description": "Returns a string representation of the object.",
+            "itemtype": "method",
+            "name": "toString",
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 107,
+            "description": "Import parameters from template",
+            "itemtype": "method",
+            "name": "readTicket",
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 149,
+            "description": "Writes the current ticket to a ZPL file",
+            "itemtype": "method",
+            "name": "writeTicket",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "The path of the file to write",
+                    "type": "String"
+                }
+            ],
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 175,
+            "description": "set ticket's date to current date",
+            "type": "{Date}",
+            "class": "Ticket"
+        },
+        {
+            "file": "Ticket.js",
+            "line": 208,
+            "description": "replace accents by zpl equivalents",
+            "itemtype": "method",
+            "name": "replaceAccents",
+            "params": [
+                {
+                    "name": "strInput",
+                    "description": "The string input",
+                    "type": "<String>"
+                }
+            ],
+            "return": {
+                "description": "the string with accent replaced",
+                "type": "<String>"
+            },
+            "class": "Ticket"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\ncreate new Ticket with the first argument as path to the file template",
+            "line": " Main.js:17"
+        },
+        {
+            "message": "Missing item type\nimport parameters from template",
+            "line": " Main.js:26"
+        },
+        {
+            "message": "Missing item type\nchange ticket's name",
+            "line": " Main.js:32"
+        },
+        {
+            "message": "Missing item type\nexport ticket",
+            "line": " Main.js:38"
+        },
+        {
+            "message": "Missing item type\nsend the file to the printer",
+            "line": " Main.js:45"
+        },
+        {
+            "message": "Missing item type\nset ticket's date to current date",
+            "line": " Ticket.js:175"
+        }
+    ]
+}
