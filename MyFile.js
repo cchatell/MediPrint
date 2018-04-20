@@ -3,7 +3,7 @@
  *
  * @class      MyFile
  */
-export class MyFile {
+module.exports =  MyFile = class {
 
   /**
    * Constructs the object.
@@ -58,9 +58,10 @@ export class MyFile {
     }
     this.logger.info("Writing file : "+path);
     var fs = require('fs');
+    var insideLogger = this.logger;
     fs.writeFile(path, text, function(err) {
       if(err) {
-          this.logger.error("Error writing file " + path + " : " + err);
+          insideLogger.error("Error writing file " + path + " : " + err);
       }
     }); 
   }

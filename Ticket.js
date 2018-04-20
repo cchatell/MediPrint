@@ -5,7 +5,7 @@ require('./MyFile.js');
  *
  * @class      Ticket
  */
-export class Ticket {
+module.exports = Ticket = class {
 
 
     /**

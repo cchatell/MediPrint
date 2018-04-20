@@ -6,7 +6,7 @@ require('./Logger.js');
  *
  * @class      Main
  */
-export class Main{
+module.exports = Main = class {
 
 	/**
 	 * Constructs the object.
@@ -58,4 +58,4 @@ export class Main{
 	}
 }
 
-Main main = new Main();
+var main = new Main();

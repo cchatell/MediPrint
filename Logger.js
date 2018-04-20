@@ -3,7 +3,7 @@
  *
  * @class      Logger
  */
-export class Logger  {
+module.exports = Logger = class  {
 
     /**
      * Constructs the object.
