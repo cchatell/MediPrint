@@ -22,22 +22,22 @@ update
 sudo apt-get update
 ```
 
-install node and npm
+install node and npm (5.6.0)
 
 ```
 sudo apt-get install nodejs npm
 ```
 
-install node module winston
+install node module winston (3.0.0)
 
 ```
-sudo node install -g winston
+sudo npm install -g winston
 ```
 
 install node module node-cmd
 
 ```
-sudo node install -g node-cmd
+sudo npm install -g node-cmd
 ```
 
 
